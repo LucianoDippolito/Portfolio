@@ -1,0 +1,24 @@
+---
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import SocialPill from "../components/SocialPill.astro";
+import Mail from "./icons/Mail.astro";
+
+---
+
+<div>
+    <nav class="flex gap-4 mt-8 flex-wrap">
+    <SocialPill href="https://www.linkedin.com/in/luciano-dippolito/">
+      <LinkedInIcon class="size-4 md:size-6" />
+       LinkedIn
+    </SocialPill>
+    <SocialPill href="https://github.com/LucianoDippolito">
+      <GitHubIcon class="size-4 md:size-6" />
+       GitHub
+    </SocialPill>
+    <SocialPill href="mailto:dippolitoluciano6@gmail.com">
+       <Mail class="size-4 md:size-6"/> 
+       dippolitoluciano6@gmail.com
+    </SocialPill>
+  </nav>
+</div>

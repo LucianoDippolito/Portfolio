@@ -1,0 +1,134 @@
+---
+import Share from "./icons/Share.astro"
+import Cloud from "./icons/Cloud.astro"
+
+import NextJS from "./icons/NextJS.astro"
+import Tailwind from "./icons/Tailwind.astro"
+import JavaScript from "./icons/JavaScript.astro"
+import Css3 from "./icons/Css3.astro"
+import Redux from "./icons/Redux.astro"
+import React from "./icons/React.astro"
+import Node from "./icons/Node.astro"
+import Firebase from "./icons/Firebase.astro"
+import Postgresql from "./icons/Postgresql.astro"
+import TypeScript from "./icons/TypeScript.astro"
+
+
+const TAGS = {
+  NEXT: {
+    name: "Next.js",
+    class: "bg-black text-white",
+    icon: NextJS,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: Tailwind,
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-yellow-500 text-white font-semibold",
+    icon: JavaScript,
+  },
+  CSS3: {
+    name: "CSS3",
+    class: "bg-blue-500 text-white font-semibold",
+    icon: Css3,
+  },
+  REDUX: {
+    name: "Redux",
+    class: "bg-purple-500 text-white font-semibold",
+    icon: Redux,
+  },
+  REACT: {
+    name: "React",
+    class: "bg-blue-400 text-white font-semibold",
+    icon: React,
+  },
+  NODEJS: {
+    name: "Node.js",
+    class: "bg-green-500 text-white font-semibold",
+    icon: Node,
+  },
+  FIREBASE: {
+    name: "Firebase",
+    class: "bg-orange-500 text-white font-semibold",
+    icon: Firebase,
+  },
+  POSTGRESQL: {
+    name: "PostgreSQL",
+    class: "bg-blue-800 text-white font-semibold",
+    icon: Postgresql,
+  },
+  TYPESCRIPT: {
+    name: "TypeScript",
+    class: "bg-blue-600 text-white font-semibold",
+    icon: TypeScript,
+  },
+};
+
+const PROJECTS = [
+  {
+    title: "EngPartner",
+    description: "Una APP de chat multilingüe que conecta a personas de todo el mundo. Ofrece traducción en tiempo real, chats privados y desbloqueo de funciones premium mediante una pasarela de pago. Incluye además un panel de administración para la gestión de usuarios y reportes de mensajes.",
+    link: "https://engpartner-aa0ce.web.app/",
+    github: "https://github.com/LucianoDippolito/EngPartner",
+    image: "../../public/projects/engpartner.webp",
+    tags: [TAGS.JAVASCRIPT, TAGS.CSS3, TAGS.REACT, TAGS.REDUX, TAGS.NODEJS, TAGS.TYPESCRIPT, TAGS.POSTGRESQL, TAGS.FIREBASE],
+  },
+  {
+    title: "Pokemon APP",
+    description: "Una APP basada en la API PokeAPI con el propósito de ofrecer una plataforma para gestionar de información relacionada con Pokémon. Permite a usuarios realizar búsquedas, visualizar detalles, aplicar filtros y ordenar la información de Pokémon de manera eficiente. Además de poder crear nuevos Pokémon junto con todas sus estadísticas.",
+    link: "",
+    github: "https://github.com/LucianoDippolito/Pokemon-PI-Henry",
+    image: "../../public/projects/PokemonAPP.webp",
+    tags: [TAGS.JAVASCRIPT, TAGS.CSS3,TAGS.REACT, TAGS.REDUX, TAGS.NODEJS, TAGS.POSTGRESQL],
+  }
+]
+---
+
+{
+  PROJECTS.map(({ image, title, description, link, github, tags }) => (
+    <article class="mb-10">
+      <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <div class="flex flex-col md:flex-row gap-4 my-4">
+        <a
+          class={`bg-white/5 border border-white/10 rounded-full flex justify-center items-center gap-x-2 py-1 px-2 md:py-2 md:px-4 text-xs md:text-base transition hover:scale-110 :bg-white/10`}
+          target="_blank"
+          rel="noopener noreferrer"
+          href={github}
+        >
+          <Share /> Repositorio
+        </a>
+        {link ? (
+          <a
+            class={`bg-white/5 border border-white/10 rounded-full flex justify-center items-center gap-x-2 py-1 px-2 md:py-2 md:px-4 text-xs md:text-base transition hover:scale-110 :bg-white/10`}
+            target="_blank"
+            rel="noopener noreferrer"
+            href={link}
+          >
+            <Cloud /> Deploy
+          </a>
+        ) : null}
+      </div>
+      <div class="flex flex-wrap mb-2">
+        {tags.map((tag) => (
+          <span
+            class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 mb-2`}
+          >
+            <tag.icon class="size-4" />
+            {tag.name}
+          </span>
+        ))}
+      </div>
+      <img
+        loading="lazy"
+        class="rounded shadow-2xl shadow-white/10 aspect-video"
+        src={image}
+        alt={`Captura de pantalla del proyecto ${image}`}
+      />
+    </article>
+  ))
+}
+
