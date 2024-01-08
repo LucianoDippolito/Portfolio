@@ -12,6 +12,8 @@ import CodeIcon from "../components/icons/Code.astro";
 import Contact from "../components/Contact.astro";
 import ContactIcon from "../components/icons/ContactIcon.astro"
 import Projects from "../components/Projects.astro";
+import Skills from "../components/Skills.astro";
+import SkillsIcon from "../components/icons/SkillsIcon.astro"
 import cv from "../doc/DIPPOLITO_LUCIANO.pdf";
 ---
 
@@ -21,7 +23,7 @@ import cv from "../doc/DIPPOLITO_LUCIANO.pdf";
   <main class="px-4">
     <SectionContainer id="" class="py-32 pb-32">
       <img
-        class="rounded-full size-12 mb-4"
+        class="rounded-full size-20 mb-4"
         src="/profile.jpg"
         alt="Photo"
       />
@@ -35,14 +37,14 @@ import cv from "../doc/DIPPOLITO_LUCIANO.pdf";
           rel="noopener"
           class="flex justify-center items-center"
         >
-          <Badge>Disponible para trabajar</Badge>
+          <Badge>Conectar en LinkedIn</Badge>
         </a>
       </h1>
       <h2 class="text-xl lg:text-2xl text-balance max-w-[700px]">
         Desarrollador <span class="text-yellow-200"> Full Stack</span> con
         enfoque en el sector <span class="text-yellow-200">Front End</span>.
         Originario de <span class="text-sky-200">Buenos Aires, Argentina</span>.
-        <span class="text-purple-300/90"> Especializado en crear aplicaciones web únicas. </span>
+        <span class="text-purple-300/90"> En cada proyecto, la imaginación es el único límite. </span>
       </h2>
 
       <nav class="flex gap-4 mt-8 flex-wrap">
@@ -75,6 +77,14 @@ import cv from "../doc/DIPPOLITO_LUCIANO.pdf";
         <CodeIcon class="size-7" />
       </h2>
       <Projects />
+    </SectionContainer>
+
+    <SectionContainer id="skills">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        Skills
+        <SkillsIcon class="size-7" />
+      </h2>
+      <Skills />
     </SectionContainer>
     
     <SectionContainer id="contacto">

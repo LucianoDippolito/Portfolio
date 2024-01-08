@@ -1,0 +1,38 @@
+---
+import Tailwind from "./icons/Tailwind.astro";
+import JavaScript from "./icons/JavaScript.astro";
+import Css3 from "./icons/Css3.astro";
+import Redux from "./icons/Redux.astro";
+import React from "./icons/React.astro";
+import Node from "./icons/Node.astro";
+import Firebase from "./icons/Firebase.astro";
+import Postgresql from "./icons/Postgresql.astro";
+import Html5 from "./icons/Html5.astro";
+import Bootstrap from "./icons/Bootstrap.astro";
+import AstroIcon from "./icons/AstroIcon.astro";
+
+const icons = [
+  JavaScript,
+  Html5,
+  Css3,
+  Tailwind,
+  Bootstrap,
+  AstroIcon,
+  React,
+  Redux,
+  Node,
+  Firebase,
+  Postgresql,
+];
+---
+
+<div class="flex gap-4">
+  {
+    icons.map((Icon, index) => (
+      <Icon
+        class="size-14 transform transition-transform duration-300 hover:scale-125"
+        key={index}
+      />
+    ))
+  }
+</div>

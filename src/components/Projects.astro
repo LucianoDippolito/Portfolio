@@ -1,18 +1,18 @@
 ---
-import Share from "./icons/Share.astro"
-import Cloud from "./icons/Cloud.astro"
+import Share from "./icons/Share.astro";
+import Cloud from "./icons/Cloud.astro";
 
-import NextJS from "./icons/NextJS.astro"
-import Tailwind from "./icons/Tailwind.astro"
-import JavaScript from "./icons/JavaScript.astro"
-import Css3 from "./icons/Css3.astro"
-import Redux from "./icons/Redux.astro"
-import React from "./icons/React.astro"
-import Node from "./icons/Node.astro"
-import Firebase from "./icons/Firebase.astro"
-import Postgresql from "./icons/Postgresql.astro"
-import TypeScript from "./icons/TypeScript.astro"
-
+import NextJS from "./icons/NextJS.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import JavaScript from "./icons/JavaScript.astro";
+import Css3 from "./icons/Css3.astro";
+import Redux from "./icons/Redux.astro";
+import React from "./icons/React.astro";
+import Node from "./icons/Node.astro";
+import Firebase from "./icons/Firebase.astro";
+import Postgresql from "./icons/Postgresql.astro";
+import TypeScript from "./icons/TypeScript.astro";
+import Html5 from "./icons/Html5.astro";
 
 const TAGS = {
   NEXT: {
@@ -65,26 +65,50 @@ const TAGS = {
     class: "bg-blue-600 text-white font-semibold",
     icon: TypeScript,
   },
+  HTML5: {
+  name: "HTML5",
+  class: "bg-orange-300 text-black font-semibold", 
+  icon: Html5,
+},
 };
 
 const PROJECTS = [
   {
     title: "EngPartner",
-    description: "Una APP de chat multilingüe que conecta a personas de todo el mundo. Ofrece traducción en tiempo real, chats privados y desbloqueo de funciones premium mediante una pasarela de pago. Incluye además un panel de administración para la gestión de usuarios y reportes de mensajes.",
+    description:
+      "Una APP de chat multilingüe que conecta a personas de todo el mundo. Ofrece traducción en tiempo real, chats privados y desbloqueo de funciones premium mediante una pasarela de pago. Incluye además un panel de administración para la gestión de usuarios y reportes de mensajes.",
     link: "https://engpartner-aa0ce.web.app/",
     github: "https://github.com/LucianoDippolito/EngPartner",
     image: "/projects/engpartner.webp",
-    tags: [TAGS.JAVASCRIPT, TAGS.CSS3, TAGS.REACT, TAGS.REDUX, TAGS.NODEJS, TAGS.TYPESCRIPT, TAGS.POSTGRESQL, TAGS.FIREBASE],
+    tags: [
+      TAGS.JAVASCRIPT,
+      TAGS.CSS3,
+      TAGS.REACT,
+      TAGS.REDUX,
+      TAGS.NODEJS,
+      TAGS.TYPESCRIPT,
+      TAGS.POSTGRESQL,
+      TAGS.FIREBASE,
+    ],
   },
   {
     title: "Pokemon APP",
-    description: "Una APP basada en la API PokeAPI con el propósito de ofrecer una plataforma para gestionar de información relacionada con Pokémon. Permite a usuarios realizar búsquedas, visualizar detalles, aplicar filtros y ordenar la información de Pokémon de manera eficiente. Además de poder crear nuevos Pokémon junto con todas sus estadísticas.",
+    description:
+      "Una APP basada en la API PokeAPI con el propósito de ofrecer una plataforma para gestionar de información relacionada con Pokémon. Permite a usuarios realizar búsquedas, visualizar detalles, aplicar filtros y ordenar la información de Pokémon de manera eficiente. Además de poder crear nuevos Pokémon junto con todas sus estadísticas.",
     link: "",
     github: "https://github.com/LucianoDippolito/Pokemon-PI-Henry",
     image: "/projects/pokemon-app.webp",
-    tags: [TAGS.JAVASCRIPT, TAGS.CSS3,TAGS.REACT, TAGS.REDUX, TAGS.NODEJS, TAGS.POSTGRESQL],
-  }
-]
+    tags: [
+      TAGS.JAVASCRIPT,
+      TAGS.CSS3,
+      TAGS.REACT,
+      TAGS.REDUX,
+      TAGS.NODEJS,
+      TAGS.POSTGRESQL,
+    ],
+  },
+];
+
 ---
 
 {
@@ -126,9 +150,8 @@ const PROJECTS = [
         loading="lazy"
         class="rounded shadow-2xl shadow-white/10 aspect-video"
         src={image}
-        alt={`Captura de pantalla del proyecto ${image}`}
+        alt={"Captura de pantalla del proyecto"}
       />
     </article>
   ))
 }
-
